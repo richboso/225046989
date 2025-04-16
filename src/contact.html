@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | My Portfolio</title>
+    <link rel="stylesheet" href="styles-css.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <!-- PLACEHOLDER: Replace with your logo or name -->
+                <h2 class="logo">rich<span>BOSO</span></h2>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <i class="fas fa-times" id="close-menu"></i>
+                </ul>
+                <i class="fas fa-bars" id="open-menu"></i>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h1 class="section-title">Contact <span>Me</span></h1>
+            
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <!-- PLACEHOLDER: Add your email -->
+                            <p>bosorichard04@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <!-- PLACEHOLDER: Add your phone number -->
+                            <p>+233 20 605 3858</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <!-- PLACEHOLDER: Add your location -->
+                            <p>Accra, Ghana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <!-- PLACEHOLDER: Add your social media links -->
+                        <a href="https://github.com/richboso" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/richard-boso-jr-a7ab60281/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/rich_boso?t=8f_zIUMI4MJjQi9Oijtung&s=08" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/rich_boso?igsh=d3g0dDlvazRsc3k0" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <!-- 
+                    IMPORTANT: This form is set up to send data to a Google Sheet
+                    To set this up on your system:
+                    1. Create a Google Sheet
+                    2. Use Google Apps Script to create a web app that receives form data
+                    3. Replace the action URL with your script URL
+                    -->
+                    <form name="contact-form" id="contact-form" action="YOUR_GOOGLE_SHEET_SCRIPT_URL" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="Name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Subject" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="Message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <span id="form-status"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional) -->
+    <section id="map">
+        <div class="container">
+            <!-- PLACEHOLDER: Replace with your location map -->
+            <div class="map-placeholder">
+                <!-- You can replace this with an actual map embed code -->
+                <div class="map-frame">
+                    <p>MYy Location Map</p>
+                    <p><i class="fas fa-map-marked-alt"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <!-- PLACEHOLDER: Replace with your name or brand -->
+                    <h3>Richard Boso</h3>
+                    <p>Web Developer & Designer</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <!-- PLACEHOLDER: Add your social media links -->
+                        <a href="https://github.com/richboso" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/richard-boso-jr-a7ab60281/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/rich_boso?t=8f_zIUMI4MJjQi9Oijtung&s=08" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/rich_boso?igsh=d3g0dDlvazRsc3k0" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Richard Boso. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form submission and validation -->
+    <script>
+        const sideMenu = document.getElementById("sidemenu");
+        
+        document.getElementById("open-menu").addEventListener("click", function() {
+            sideMenu.style.right = "0";
+        });
+        
+        document.getElementById("close-menu").addEventListener("click", function() {
+            sideMenu.style.right = "-200px";
+        });
+
+        // Form submission handler
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const formStatus = document.getElementById("form-status");
+            formStatus.textContent = "Sending...";
+            
+            const formData = new FormData(this);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // This is where you would normally send the data to your server or Google Sheet
+            // For demonstration purposes, we'll just show a success message
+            // In a real implementation, you would use fetch() to send the data
+            
+            setTimeout(() => {
+                formStatus.textContent = "Message sent successfully!";
+                document.getElementById("contact-form").reset();
+                
+                setTimeout(() => {
+                    formStatus.textContent = "";
+                }, 3000);
+            }, 1500);
+            
+            /* 
+            UNCOMMENT AND MODIFY THIS CODE TO CONNECT TO YOUR GOOGLE SHEET
+            
+            fetch('YOUR_GOOGLE_SHEET_SCRIPT_URL', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                formStatus.textContent = "Message sent successfully!";
+                document.getElementById("contact-form").reset();
+                
+                setTimeout(() => {
+                    formStatus.textContent = "";
+                }, 3000);
+            })
+            .catch(error => {
+                formStatus.textContent = "Something went wrong. Please try again.";
+                console.error('Error:', error);
+            });
+            */
+        });
+    </script>
+</body>
+</html>
