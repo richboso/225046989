@@ -1,0 +1,490 @@
+/* ================ DYNAMIC ENHANCEMENTS ================ */
+
+/* Smooth Scrolling for entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation - Page Fade In */
+body {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-darker);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Enhanced Header Animation */
+header {
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    padding: 0.8rem 8%;
+    background-color: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Improved Navigation Transitions */
+nav ul li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: translateY(-3px);
+}
+
+nav ul li a::after {
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Mobile Navigation Animation */
+@media screen and (max-width: 768px) {
+    nav ul {
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+    
+    nav ul.show {
+        transform: translateY(0);
+    }
+    
+    .hamburger {
+        transition: transform 0.3s ease;
+    }
+    
+    .hamburger.active {
+        transform: rotate(90deg);
+    }
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Reveal for Multiple Items */
+.stagger-reveal .item {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stagger-reveal.active .item:nth-child(1) {
+    animation: fadeInUp 0.5s ease forwards 0.1s;
+}
+
+.stagger-reveal.active .item:nth-child(2) {
+    animation: fadeInUp 0.5s ease forwards 0.3s;
+}
+
+.stagger-reveal.active .item:nth-child(3) {
+    animation: fadeInUp 0.5s ease forwards 0.5s;
+}
+
+.stagger-reveal.active .item:nth-child(4) {
+    animation: fadeInUp 0.5s ease forwards 0.7s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Section Titles */
+.section-title::after {
+    transition: width 0.6s ease;
+    width: 0;
+}
+
+.section-title.active::after {
+    width: 60px;
+}
+
+/* Parallax Effect for Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.hero-content, .hero-image {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+/* Image Hover Effects */
+.profile-picture {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+}
+
+.profile-picture:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced Project Cards */
+.project-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease,
+                background-color 0.4s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: #262626;
+}
+
+.project-image-placeholder {
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image-placeholder img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image-placeholder img {
+    transform: scale(1.1);
+}
+
+/* Project Card Overlay */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 79, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Enhanced Service Cards */
+.service-card {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.5s ease,
+                background-color 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
+    background-color: #262626;
+}
+
+.service-card i {
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Pulse Animation for CTA Section */
+.cta .btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.cta .btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Social Links Hover Effect */
+.social-links a {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) rotate(5deg);
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.social-links a:hover::before {
+    transform: scale(1);
+}
+
+/* Skill Bars Animation */
+.skill-progress {
+    position: relative;
+}
+
+.progress-bar {
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.skill-progress.animate .progress-bar {
+    width: var(--percent);
+}
+
+/* Form Fields Animations */
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-control:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+    pointer-events: none;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    transform: translateY(-1.8rem);
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+/* Filter Buttons Animation */
+.filter-btn {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--accent-color);
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.filter-btn:hover::before {
+    width: 100%;
+}
+
+.filter-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Testimonial Card Animation */
+.testimonial-card {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Cursor Animation */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 79, 0.5);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 79, 0.2);
+}
+
+/* Horizontal Scrolling Animation for Showcases */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 2rem 0;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.horizontal-scroll-item {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 2rem;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.horizontal-scroll-item:hover {
+    transform: scale(1.05);
+}
+
+/* Enhanced Media Queries with Animations */
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    .hero-image {
+        animation: fadeInUp 0.8s ease forwards 0.3s;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul li {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    nav ul.show li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    nav ul.show li:nth-child(1) { transition-delay: 0.1s; }
+    nav ul.show li:nth-child(2) { transition-delay: 0.2s; }
+    nav ul.show li:nth-child(3) { transition-delay: 0.3s; }
+    nav ul.show li:nth-child(4) { transition-delay: 0.4s; }
+    nav ul.show li:nth-child(5) { transition-delay: 0.5s; }
+    
+    .project-card, .service-card {
+        transform: scale(0.98);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+

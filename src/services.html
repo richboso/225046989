@@ -2,102 +2,345 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | My Portfolio</title>
+    <title>Richard Boso | Services</title>
     <link rel="stylesheet" href="styles-css.css">
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="animations.js">
+    <link rel="icon" href="/images/JPGLOGO.jpg" type="image/x-icon">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header Section with Navigation -->
     <header>
-        <div class="container">
-            <nav>
-                <!-- PLACEHOLDER: Replace with your logo or name -->
-                <h2 class="logo">Your<span>Name</span></h2>
-                <ul id="sidemenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <i class="fas fa-times" id="close-menu"></i>
-                </ul>
-                <i class="fas fa-bars" id="open-menu"></i>
-            </nav>
+        <div class="logo">
+            <h1>rich<span>BOSO</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
         </div>
     </header>
 
+    <!-- Page Title -->
+    <section class="page-title">
+        <h1>My <span>Services</span></h1>
+    </section>
+
     <!-- Services Section -->
-    <section id="services">
+    <section class="services-page">
         <div class="container">
-            <h1 class="section-title">My <span>Services</span></h1>
-            <div class="services-list">
-                <!-- Service 1 -->
-                <div class="service-item">
-                    <i class="fas fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>Creating responsive and user-friendly websites using HTML, CSS, and JavaScript. Specializing in modern web technologies and frameworks.</p>
-                    <!-- PLACEHOLDER: Add your specific service details -->
-                    <a href="#" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <p class="services-intro">
+                Here are the professional services I offer to help businesses and individuals
+                bring their digital vision to life. Each service is customized to meet your specific needs.
+            </p>
 
-                <!-- Service 2 -->
-                <div class="service-item">
-                    <i class="fas fa-crop-alt"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Designing intuitive user interfaces and creating seamless user experiences. Focusing on user-centered design principles and accessibility.</p>
-                    <!-- PLACEHOLDER: Add your specific service details -->
-                    <a href="#" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            <!-- Service 1 -->
+            <div class="service-card">
+                <h3><i class="fas fa-code"></i> Web Development</h3>
+                <div class="service-details">
+                    <p>
+                        I create responsive, user-friendly websites that look great on all devices.
+                        From simple landing pages to complex web applications, I can build your
+                        digital presence from scratch or improve your existing site.
+                    </p>
+                    
+                    <ul class="service-features">
+                        <li>Custom website development</li>
+                        <li>E-commerce solutions</li>
+                        <li>Content Management Systems (WordPress, etc.)</li>
+                        <li>Website redesign and optimization</li>
+                        <li>Front-end and back-end development</li>
+                    </ul>
+                    
+                    <div class="service-tech">
+                        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React, Node.js, PHP, WordPress</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Service 3 -->
-                <div class="service-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h2>Responsive Design</h2>
-                    <p>Building websites that work flawlessly across all devices - from desktop to mobile. Ensuring optimal viewing experience regardless of screen size.</p>
-                    <!-- PLACEHOLDER: Add your specific service details -->
-                    <a href="#" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <h3><i class="fas fa-paint-brush"></i> UI/UX Design</h3>
+                <div class="service-details">
+                    <p>
+                        I design intuitive, engaging user interfaces that create exceptional user experiences.
+                        My design process focuses on user needs while aligning with your business goals.
+                    </p>
+                    
+                    <ul class="service-features">
+                        <li>User Interface (UI) design</li>
+                        <li>User Experience (UX) design</li>
+                        <li>Wireframing and prototyping</li>
+                        <li>User research and testing</li>
+                        <li>Design systems and style guides</li>
+                    </ul>
+                    
+                    <div class="service-tech">
+                        <p><strong>Technologies:</strong> Figma, Adobe XD, Sketch, Photoshop, Illustrator</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Service 4 -->
-                <div class="service-item">
-                    <i class="fas fa-search"></i>
-                    <h2>SEO Optimization</h2>
-                    <p>Implementing best practices to improve website visibility in search engines. Enhancing website performance and organic traffic.</p>
-                    <!-- PLACEHOLDER: Add your specific service details -->
-                    <a href="#" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <h3><i class="fas fa-mobile-alt"></i> Mobile App Development</h3>
+                <div class="service-details">
+                    <p>
+                        I develop custom mobile applications for Android and iOS platforms that are 
+                        intuitive, fast, and reliable. Whether you need a completely new app or want to 
+                        improve an existing one, I can help bring your vision to life.
+                    </p>
+                    
+                    <ul class="service-features">
+                        <li>Native and cross-platform app development</li>
+                        <li>UI/UX design for mobile</li>
+                        <li>App performance optimization</li>
+                        <li>Integration with third-party services</li>
+                        <li>App maintenance and updates</li>
+                    </ul>
+                    
+                    <div class="service-tech">
+                        <p><strong>Technologies:</strong> React Native, Flutter, Swift, Kotlin</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Service 5 -->
-                <div class="service-item">
-                    <i class="fas fa-server"></i>
-                    <h2>Website Maintenance</h2>
-                    <p>Providing ongoing support and updates to keep your website secure and running smoothly. Regular backups, updates, and performance monitoring.</p>
-                    <!-- PLACEHOLDER: Add your specific service details -->
-                    <a href="#" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            <!-- Service 4 -->
+            <div class="service-card">
+                <h3><i class="fas fa-search"></i> SEO Optimization</h3>
+                <div class="service-details">
+                    <p>
+                        I help improve your website's visibility in search engine results to attract more 
+                        organic traffic. My SEO strategies are tailored to your specific industry and target audience.
+                    </p>
+                    
+                    <ul class="service-features">
+                        <li>Keyword research and analysis</li>
+                        <li>On-page and off-page SEO</li>
+                        <li>Technical SEO improvements</li>
+                        <li>Content optimization</li>
+                        <li>Performance monitoring and reporting</li>
+                    </ul>
+                    
+                    <div class="service-tech">
+                        <p><strong>Tools:</strong> Google Analytics, Search Console, SEMrush, Ahrefs</p>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Service 6 -->
-                <div class="service-item">
-                    <i class="fas fa-paint-brush"></i>
-                    <h2>Graphic Design</h2>
-                    <p>Creating visually appealing graphics for web and print. Designing logos, banners, and marketing materials that align with your brand identity.</p>
-                    <!-- PLACEHOLDER: Add your specific service details -->
-                    <a href="#" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+            <!-- Service 5 -->
+            <div class="service-card">
+                <h3><i class="fas fa-server"></i> Web Hosting & Maintenance</h3>
+                <div class="service-details">
+                    <p>
+                        I provide reliable web hosting solutions and ongoing maintenance services to 
+                        ensure your website remains secure, up-to-date, and performs optimally.
+                    </p>
+                    
+                    <ul class="service-features">
+                        <li>Domain registration and management</li>
+                        <li>Secure web hosting</li>
+                        <li>Regular backups and security updates</li>
+                        <li>Performance monitoring and optimization</li>
+                        <li>Technical support and troubleshooting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2 class="section-title">Pricing Plans</h2>
+        <div class="pricing-container">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Basic</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">499</span>
+                        <span class="period">/project</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Simple Website (Up to 5 pages)</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-times"></i> E-commerce Functionality</li>
+                        <li><i class="fas fa-times"></i> Custom Animations</li>
+                        <li><i class="fas fa-times"></i> Premium Support</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="contact.html" class="btn">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Standard Plan -->
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Popular</div>
+                <div class="pricing-header">
+                    <h3>Standard</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">999</span>
+                        <span class="period">/project</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Multi-page Website (Up to 10 pages)</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO Setup</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-check"></i> Basic E-commerce (Up to 20 products)</li>
+                        <li><i class="fas fa-check"></i> Basic Animations</li>
+                        <li><i class="fas fa-times"></i> Premium Support</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="contact.html" class="btn">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Premium</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1999</span>
+                        <span class="period">/project</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Custom Website (Unlimited pages)</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Comprehensive SEO Strategy</li>
+                        <li><i class="fas fa-check"></i> Advanced Forms & Features</li>
+                        <li><i class="fas fa-check"></i> Full E-commerce Solution</li>
+                        <li><i class="fas fa-check"></i> Custom Animations</li>
+                        <li><i class="fas fa-check"></i> 6 Months Premium Support</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="contact.html" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-note">
+            <p>
+                * All prices are starting points. The final quote may vary based on project requirements.
+                Contact me for a personalized quote.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How long does it take to complete a website?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        The timeline varies depending on the complexity of the project. A simple website typically takes 2-4 weeks, The timeline varies depending on the complexity of the project. A simple website typically takes 2-4 weeks, while more complex projects can take 6-12 weeks. I'll provide a detailed timeline during our initial consultation based on your specific requirements and desired launch date.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What information do you need to start a project?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        To get started, I need to understand your goals, target audience, and design preferences. It's helpful if you can provide examples of websites you like, your brand guidelines (logos, colors, etc.), and content for your website. I'll guide you through this process with a comprehensive project questionnaire.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you provide content writing services?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        While I focus primarily on design and development, I can recommend professional copywriters who specialize in creating compelling web content. Alternatively, I can work with content you provide. If you need help with basic content optimization for SEO purposes, that's included in my services.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do we communicate during the project?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Communication is key to a successful project. We'll have regular check-ins via email, phone, or video calls based on your preference. I use project management tools that allow you to track progress, provide feedback, and approve milestones throughout the development process.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer website maintenance after launch?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes, I offer various maintenance packages to keep your website secure, up-to-date, and performing optimally. These packages can include regular updates, security monitoring, content updates, backup services, and technical support. We can discuss these options once your project is nearing completion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is your payment structure?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        I typically work with a 50% upfront deposit to secure your project in my schedule, with the remaining balance due upon project completion. For larger projects, we can arrange milestone payments. I accept payments via direct bank transfer, PayPal, or credit card.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section id="cta">
+    <section class="cta">
         <div class="container">
-            <h2>Ready to start your project?</h2>
-            <p>Let's create something amazing together.</p>
-            <a href="contact.html" class="btn">Get in Touch</a>
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how I can help bring your vision to life.</p>
+            <a href="contact.html" class="btn btn-large">Get in Touch</a>
         </div>
     </section>
 
@@ -105,26 +348,37 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <!-- PLACEHOLDER: Replace with your name or brand -->
-                    <h3>Your Name</h3>
-                    <p>Web Developer & Designer</p>
+                <div class="footer-logo">
+                    <h2>rich<span>BOSO</span></h2>
+                    <p>Data Analyst | Web Developer | UI/UX Designer</p>
                 </div>
-                <div class="footer-col">
+                <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Connect With Me</h3>
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Mobile App Development</li>
+                        <li>SEO Optimization</li>
+                        <li>Web Hosting & Maintenance</li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Me</h3>
+                    <p><i class="fas fa-envelope"></i> bosorichard04@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +233 20 605 3858</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
                     <div class="social-icons">
-                        <!-- PLACEHOLDER: Add your social media links -->
                         <a href="https://github.com/richboso" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/richard-boso-jr-a7ab60281/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://x.com/rich_boso?t=8f_zIUMI4MJjQi9Oijtung&s=08" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -132,22 +386,49 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="footer-bottom">
                 <p>&copy; 2025 Richard Boso. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for menu toggle -->
+    <!-- JavaScript for FAQ toggle -->
     <script>
-        const sideMenu = document.getElementById("sidemenu");
-        
-        document.getElementById("open-menu").addEventListener("click", function() {
-            sideMenu.style.right = "0";
+        // Toggle hamburger menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
         });
+
+        // FAQ toggle functionality
+        const faqItems = document.querySelectorAll('.faq-item');
         
-        document.getElementById("close-menu").addEventListener("click", function() {
-            sideMenu.style.right = "-200px";
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-question i');
+            
+            question.addEventListener('click', () => {
+                // Close all other answers
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').classList.remove('show');
+                        otherItem.querySelector('.faq-question i').classList.remove('fa-minus');
+                        otherItem.querySelector('.faq-question i').classList.add('fa-plus');
+                    }
+                });
+                
+                // Toggle current answer
+                answer.classList.toggle('show');
+                
+                // Toggle icon
+                if (answer.classList.contains('show')) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }
+            });
         });
     </script>
 </body>
